@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -82,13 +83,23 @@
     background: #fbfcfb;
     line-height: 1.45;
   }
-  .feature strong { display: block; color: #24332f; margin-bottom: 4px; }
-  .feature span { color: #6b7572; font-size: 14px; }
+  .feature strong {
+    display: block;
+    color: #24332f;
+    margin-bottom: 4px;
+  }
+  .feature span {
+    color: #6b7572;
+    font-size: 14px;
+  }
   .signup {
     padding-top: 28px;
     border-top: 1px solid #e6e9e7;
   }
-  .signup p { color: #65716e; }
+  .signup p {
+    color: #65716e;
+    line-height: 1.6;
+  }
   form {
     display: flex;
     gap: 10px;
@@ -112,71 +123,120 @@
     font-weight: 700;
     cursor: pointer;
   }
-  button:hover { opacity: .9; }
+  button:hover {
+    opacity: .9;
+  }
   .small {
     margin-top: 20px;
     font-size: 12px;
     color: #89918e;
   }
   @media (max-width: 600px) {
-    .card { padding: 38px 22px; }
-    .features { grid-template-columns: 1fr; }
-    form { flex-direction: column; }
+    .card {
+      padding: 38px 22px;
+    }
+    .features {
+      grid-template-columns: 1fr;
+    }
+    form {
+      flex-direction: column;
+    }
   }
 </style>
 </head>
+
 <body>
 <main class="page">
   <section class="card">
-    <div class="brand">Curtains & Pillows</div>
-    <h1>Made-to-Measure.<br>Configured Online.</h1>
-    <p class="tagline">A smarter way to design your curtains and pillows.</p>
 
-    <div class="notice">🚧 Our Website Is Under Construction</div>
+```
+<div class="brand">Curtains & Pillows</div>
 
-    <h2>We’re currently building something special.</h2>
-    <p class="intro">
-      Our new online configurator is being developed to make ordering
-      made-to-measure curtains and pillows simple, visual and transparent.
-      We’re aiming for an early 2027 launch.
-    </p>
+<h1>Made-to-Measure.<br>Configured Online.</h1>
 
-    <div class="features">
-      <div class="feature">
-        <strong>📐 Configure Online</strong>
-        <span>Enter your exact made-to-measure requirements.</span>
-      </div>
-      <div class="feature">
-        <strong>👁️ See It in Real Time</strong>
-        <span>Preview your configuration as you build it.</span>
-      </div>
-      <div class="feature">
-        <strong>💰 Instant Pricing</strong>
-        <span>Know your price as you configure.</span>
-      </div>
-      <div class="feature">
-        <strong>🚚 Delivery Time</strong>
-        <span>See an estimated delivery date for your order.</span>
-      </div>
-      <div class="feature">
-        <strong>🧵 Select Your Material</strong>
-        <span>Choose from available fabrics, finishes and options.</span>
-      </div>
-      <div class="feature">
-        <strong>🛠️ Detailed Options</strong>
-        <span>Configure sizes, styles, materials and more.</span>
-      </div>
-    </div>
+<p class="tagline">
+  A smarter way to design your curtains and pillows.
+</p>
 
-    <div class="signup">
-      <h2>📩 Be the First to Know</h2>
-      <p>Leave your email and we’ll notify you when the configurator goes live.</p>
-      <form id="notifyForm" onsubmit="event.preventDefault(); notifyMe();">
-        <input id="email" type="email" required placeholder="Your email address" aria-label="Your email address">
-        <button type="submit">Notify Me</button>
-      </form>
-      <div class="small">© 2026 — Mister Shoekran LLC. All rights reserved.</div>
-    </div>
+<div class="notice">
+  🚧 Our Website Is Under Construction
+</div>
+
+<h2>We’re currently building something special.</h2>
+
+<p class="intro">
+  Our new online configurator is being developed to make ordering
+  made-to-measure curtains and pillows simple, visual and transparent.
+  We’re aiming for an early 2027 launch.
+</p>
+
+<div class="features">
+
+  <div class="feature">
+    <strong>📐 Configure Online</strong>
+    <span>Enter your exact made-to-measure requirements.</span>
+  </div>
+
+  <div class="feature">
+    <strong>👁️ See It in Real Time</strong>
+    <span>Preview your configuration as you build it.</span>
+  </div>
+
+  <div class="feature">
+    <strong>💰 Instant Pricing</strong>
+    <span>Know your price as you configure.</span>
+  </div>
+
+  <div class="feature">
+    <strong>🚚 Delivery Time</strong>
+    <span>See an estimated delivery date for your order.</span>
+  </div>
+
+  <div class="feature">
+    <strong>🧵 Select Your Material</strong>
+    <span>Choose from available fabrics, finishes and options.</span>
+  </div>
+
+  <div class="feature">
+    <strong>🛠️ Detailed Options</strong>
+    <span>Configure sizes, styles, materials and more.</span>
+  </div>
+
+</div>
+
+<div class="signup">
+
+  <h2>📩 Be the First to Know</h2>
+
+  <p>
+    It would be greatly appreciated if you could let us know once you're online.
+    <br>
+    Thank you in advance — we look forward to hearing the launch date.
+  </p>
+
+  <form id="notifyForm" onsubmit="event.preventDefault(); notifyMe();">
+
+    <input
+      id="email"
+      type="email"
+      required
+      placeholder="Your email address"
+      aria-label="Your email address"
+    >
+
+    <button type="submit">
+      Notify Me
+    </button>
+
+  </form>
+
+  <div class="small">
+    © 2026 — Mister Shoekran LLC. All rights reserved.
+  </div>
+
+</div>
+```
+
   </section>
 </main>
 
@@ -185,9 +245,11 @@
     const email = document.getElementById('email').value.trim();
     const recipient = 'fc@neu-anspach.online';
     const subject = 'Configurator Launch Notification Request';
+
     const body =
       'Hello Mister Shoekran LLC,%0D%0A%0D%0A' +
-      'Please notify me when the Curtains & Pillows configurator goes live.%0D%0A%0D%0A' +
+      'It would be greatly appreciated if you could let us know once you\'re online.%0D%0A%0D%0A' +
+      'Thank you in advance — we look forward to hearing the launch date.%0D%0A%0D%0A' +
       'My email address: ' + encodeURIComponent(email) + '%0D%0A%0D%0A' +
       'Thank you.';
 
